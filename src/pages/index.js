@@ -1,12 +1,15 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Form from '../components/EmailForm/EmailForm'
+import image from '../static/img/IMG_4702.JPG'
 
 import './index.scss'
 
 const IndexPage = () => (
 <div>
+  <img src=image />
   <section id='showcase' className='py-5 text-white'>
+
     <div className='primary-overlay'>
       <div className='container'>
         <div className='row justify-content-center'>
