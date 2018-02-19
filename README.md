@@ -1,13 +1,25 @@
-# gatsby-starter-default
-The default Gatsby starter
+# The Travel Shelf
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+> A magazine and index of beautiful global independent bookstores
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
+## Install and usage
 
-## Deploy
+On first run, install gatsby cli globally `npm install --global gatsby-cli`.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+Run `npm install` to install dependencies.
+
+Run `gatsby develop`.
+
+## Live Site
+
+The site is hosted on Netlify. Contact Richard if you need access or want to change something.
+
+## Contribute
+
+Please contribute if you'd like. This is an open project. [Open an issue!](https://github.com/RichardLitt/the-travel-shelf/issues/new)
+
+Please note that all interaction here conforms to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md)
+
+## License
+
+[MIT](LICENSE) © Richard Littauer and [Contributors](https://github.com/RichardLitt/the-travel-shelf/graphs/contributors).
