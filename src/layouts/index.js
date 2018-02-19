@@ -4,8 +4,6 @@ import Helmet from 'react-helmet'
 
 import NavBar from '../components/Navbar/Navbar'
 
-import 'bootstrap/dist/css/bootstrap.css'
-
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
@@ -14,17 +12,8 @@ const TemplateWrapper = ({ children }) => (
         { name: 'description', content: 'A magazine and index of beautiful global independent bookstores' },
       ]}
     />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
     <NavBar />
-      {children()}
-    </div>
+    {children()}
   </div>
 )
 
