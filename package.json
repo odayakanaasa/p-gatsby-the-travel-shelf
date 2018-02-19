@@ -1,8 +1,33 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "the-travel-shelf",
+  "version": "2.0.0",
+  "description": "A magazine and index of beautiful global independent bookstores",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RichardLitt/the-travel-shelf.git"
+  },
+  "author": "Richard Littauer <richard.littauer@gmail.com> (https://burntfen.com)",
+  "contributors": [
+    "Joanna Katsifaraki <joannakatsifaraki@gmail.com> (http://joannakatswebdeveloper.com)",
+    "Hanie Jafari <me@hjafari.com> (https://www.hjafari.com)",
+    "Vernon Lillies <vernon.lillies@gmail.com>"
+  ],
+  "keywords": [
+    "independent",
+    "bookstores",
+    "index"
+  ],
+  "license": "MIT",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/RichardLitt/the-travel-shelf/issues"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "bootstrap": "^4.0.0",
     "gatsby": "^1.9.202",
@@ -10,17 +35,6 @@
     "gatsby-plugin-react-helmet": "^2.0.5",
     "gatsby-plugin-sass": "^1.0.17",
     "react-helmet": "^5.2.0"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "prettier": "^1.10.2"
