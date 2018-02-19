@@ -9,10 +9,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Gatsby Default Starter"
+      title="The Travel Shelf"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'A magazine and index of beautiful global independent bookstores' },
       ]}
     />
     <div
