@@ -3,6 +3,10 @@
 
 // HOME STYLES
 
+.top {
+  margin-top: 56px;
+}
+
 h1 {
   margin-top: 100px;
 }
@@ -10,7 +14,7 @@ h1 {
 #showcase {
   margin-top: -50px;
   position: relative;
-  //background: url('../static/img/IMG_4702.JPG') no-repeat center center fixed;
+  background: url('../static/img/banner.jpg') no-repeat center center fixed;
   width: 100%;
   min-height:500px;
   overflow: hidden;
