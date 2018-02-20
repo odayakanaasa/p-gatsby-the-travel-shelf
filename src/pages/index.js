@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Form from '../components/EmailForm/EmailForm'
 
 import './index.scss'
 
@@ -30,25 +29,6 @@ const IndexPage = () => (
     </div>
   </section>
 
-  <section id='info' className='py-3'>
-    <div className='container'>
-      <div className='row'>
-        <div className='col-md-6 align-self-center info-map'>
-          <h3>Want To Know More?</h3>
-          <hr align='center' width='30%' />
-          <p>Interested in adding a bookstore yourself?<br />
-          Want to join the team? <em>Get in touch: <a href='mailto:info@thetravelshelf.com' className='email'>info@thetravelshelf.com</a>.</em>
-          </p>
-          <h4 className='mailing'>Join Our Mailing List</h4>
-          <p>Keep up-to-date with the latest news!</p>
-          <Form />
-        </div>
-        <div className='col-md-6 map'>
-          <img src='img/worldmap-blk.png' className='img-fluid' alt='Map' />
-        </div>
-      </div>
-    </div>
-  </section>
 </div>
 )
 
