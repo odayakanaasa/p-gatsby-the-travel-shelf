@@ -28,7 +28,7 @@ class NavbarComponent extends Component {
   render(){
     return (
       <div>
-        <Navbar className="navbar" color="faded" light fixed expand="md">
+        <Navbar className="navbar" color="faded" light fixed={'top'} expand="md">
           <Container>
             <NavbarBrand>
               <Link>
