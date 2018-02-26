@@ -8,10 +8,18 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-          name: `pages`,
-          path: `${__dirname}/src/pages/`,
-      },
+          name: `src`,
+          path: `${__dirname}/src/`,
+      }
     },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //       name: `bookstore-posts`,
+    //       path: `${__dirname}/src/bookstore-posts/`,
+    //   }
+    // },
+    `gatsby-transformer-remark`
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
