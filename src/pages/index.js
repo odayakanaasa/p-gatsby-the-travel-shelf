@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 
 import './index.scss'
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
 <div className='top'>
   <section id='showcase' className='py-5 text-white'>
     <div className='primary-overlay'>
@@ -12,7 +12,7 @@ const IndexPage = () => (
           <div className='col text-center'>
             <h1 className='display-4 myhero text-center'>A magazine of beautiful independent bookstores around the world</h1>
             <Link to='/about' className='btn btn-outline-warning btn-lg read'><i
-              className='fa fa-arrow-right' /> Read More</Link>
+              className='fa fa-arrow-right' /> Read More {data.site.siteMetadata.title}</Link>
           </div>
         </div>
       </div>
@@ -33,3 +33,12 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query AboutQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }`
