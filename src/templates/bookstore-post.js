@@ -1,14 +1,9 @@
 import React, { Component } from 'react'
-import Markdown from 'react-remarkable'
-import Form from '../EmailForm/EmailForm'
-import * as imageData from '../../utilities/imageLoader'
-import './StoreArticle.scss'
+import Form from '../components/EmailForm/EmailForm'
+import './bookstore-post.scss'
 
-class storeArticle extends Component {
-  render () {
-    let images = imageData[this.props.abbreviation].map(image => {
-      return <img key={image} src={image} style={{maxWidth: '30%', height: 'auto'}} className='img-thumbnail' alt='store'/>
-    })
+const bookstorePost = ({data}) => {
+    const post = data.markdownRemark;
     return (
       <div>
         <section id='hero-bookstore' className='py-5 text-white' data-type='background' data-speed='2'>
@@ -16,7 +11,7 @@ class storeArticle extends Component {
             <div className='container'>
               <div className='row justify-content-center'>
                 <div className='col text-center'>
-                  <h1 className='display-4 myhero text-center'>{this.props.name}</h1>
+                  <h1 className='display-4 myhero text-center'>{post.frontmatter.title}</h1>
                 </div>
               </div>
             </div>
@@ -27,13 +22,10 @@ class storeArticle extends Component {
             <div className='row justify-content-center' id='primary'>
               <main id='content' className='col-md-8'>
                 <article className='post' style={{padding: '30px 20px', marginBottom: '40px'}}>
-                  <Markdown>{this.props.review}</Markdown>
+                    <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 </article>
-                <div className='post' style={{padding: '30px 20px', marginBottom: '40px', textAlign: 'center'}}>
-                  <h4 className='connect'>Images</h4>
-                    {images}
-                </div>
               </main>
+
               <aside className='col-md-4'>
                 <div className='widget'>
                   <h4>Join Our Mailing List</h4>
@@ -43,25 +35,25 @@ class storeArticle extends Component {
 
                 <div className='widget'>
                   <h4 className='connect'>Info</h4>
-                  <p className='address'><strong>{this.props.name}</strong></p>
-                  <p className='address'>{this.props.postalAddress.streetAddress}</p>
-                  <p className='address'>{this.props.postalAddress.addressLocality}, {this.props.postalAddress.addressRegion} {this.props.postalAddress.postalCode}</p>
-                  <p className='address'>{this.props.postalAddress.addressCountry}</p>
-                  <p className='address'>{this.props.telephone}</p>
+                  <p className='address'><strong>{post.frontmatter.title}</strong></p>
+                  <p className='address'>{post.frontmatter.streetAddress}</p>
+                  <p className='address'>{post.frontmatter.addressLocality}, {post.frontmatter.addressRegion} {post.frontmatter.postalCode}</p>
+                  <p className='address'>{post.frontmatter.addressCountry}</p>
+                  <p className='address'>{post.frontmatter.telephone}</p>
                   <p className='social'>
-                    {(this.props.social.twitter ? <a href={this.props.social.twitter}><i className='fa fa-twitter-square' /></a> : null)}
-                    {(this.props.social.facebook ? <a href={this.props.social.facebook}><i className='fa fa-facebook-square' /></a> : null)}
-                    {(this.props.social.instagram ? <a href={this.props.social.instagram}><i className='fa fa-instagram' /></a> : null)}
+                    {(post.frontmatter.twitter ? <a href={post.frontmatter.twitter}><i className='fa fa-twitter-square' /></a> : null)}
+                    {(post.frontmatter.facebook ? <a href={post.frontmatter.facebook}><i className='fa fa-facebook-square' /></a> : null)}
+                    {(post.frontmatter.instagram ? <a href={post.frontmatter.instagram}><i className='fa fa-instagram' /></a> : null)}
                   </p>
                 </div>
 
                 <div className='widget'>
                   <h4 className='connect'>Amenities</h4>
                   <p className='social'>
-                    {(this.props.amenities.coffee ? <i className='fa fa-coffee' aria-hidden='true' /> : null)}
-                    {(this.props.amenities.wifi ? <i className='fa fa-wifi' aria-hidden='true' /> : null)}
-                    {(this.props.amenities.plug ? <i className='fa fa-plug' aria-hidden='true' /> : null)}
-                    {(this.props.amenities.calendar ? <i className='fa fa-calendar' aria-hidden='true' /> : null)}
+                    {(post.frontmatter.coffee ? <i className='fa fa-coffee' aria-hidden='true' /> : null)}
+                    {(post.frontmatter.wifi ? <i className='fa fa-wifi' aria-hidden='true' /> : null)}
+                    {(post.frontmatter.plug ? <i className='fa fa-plug' aria-hidden='true' /> : null)}
+                    {(post.frontmatter.calendar ? <i className='fa fa-calendar' aria-hidden='true' /> : null)}
                   </p>
                 </div>
               </aside>
@@ -71,7 +63,25 @@ class storeArticle extends Component {
         </section>
       </div>
     )
-  }
 }
 
-export default storeArticle
+export default bookstorePost
+
+export const query = graphql`
+  query BlogPostQuery($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        url
+        events
+        telephone
+        addressCountry
+        addressRegion 
+        addressLocality 
+        postalCode 
+        streetAddress 
+      }
+    }
+  }
+`;
