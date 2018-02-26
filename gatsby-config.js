@@ -12,7 +12,7 @@ module.exports = {
           path: `${__dirname}/src/`,
       }
     },
-    `gatsby-transformer-remark`
+    `gatsby-transformer-remark`,
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
@@ -20,7 +20,7 @@ module.exports = {
     //       path: `${__dirname}/src/data/`,
     //   },
     // },
-    // `gatsby-transformer-sharp`,
-    // `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   ]
 };
