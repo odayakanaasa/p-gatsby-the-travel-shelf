@@ -30,10 +30,15 @@ const IndexPage = ({ data }) => {
                     Today!</p>
                 <div className='row no-gutters d-flex flex-wrap justify-content-center align-items-baseline'>
                   {data.allMarkdownRemark.edges.map(({ node }) => (
+                  <Link
+                      to={node.fields.slug}
+                      style={{ textDecoration: `none`, color: `inherit` }}
+                  >
                   <div className='col-12'>
                   <h3>{node.frontmatter.title}{" "}</h3>
                   <p>{node.excerpt}</p>
                   </div>
+                  </Link>
                   ))}
                 </div>
             </div>
@@ -54,6 +59,9 @@ allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
           frontmatter {
             title
             date(formatString: "YYYY-MM-DD")
+          }
+           fields {
+            slug
           }
           excerpt
         }
