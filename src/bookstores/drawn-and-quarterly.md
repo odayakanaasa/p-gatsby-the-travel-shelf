@@ -4,28 +4,20 @@ date: "2017-08-10"
 thumbnail: "dq_1.jpg"
 url: "https://www.drawnandquarterly.com/"
 telephone: "514 279 2221"
-amenities: {
-    "coffee": "true",
-    "plugs" : "true",
-    "wifi": "true",
-    "events": "true"
-    }
-social: {
-    "twitter": "https://twitter.com/DandQ",
-    "facebook": "https://www.facebook.com/drawnandquarterly",
-    "instagram": "https://www.instagram.com/drawnandquarterly/"
-    }
-postalAddress: {
-    "addressCountry": "Canada",
-    "addressRegion": "Quebec",
-    "addressLocality": "Montreal",
-    "postalCode": "H2T 2K5",
-    "streetAddress": "211 Bernard Ouest"
-    }
-coordinates: {
-    "long": -73.6047315,
-    "lat": 45.524778
-    }
+coffee: "true"
+plugs : "true"
+wifi: "true"
+events: "true"
+twitter: "https://twitter.com/DandQ"
+facebook: "https://www.facebook.com/drawnandquarterly"
+instagram: "https://www.instagram.com/drawnandquarterly/"
+addressCountry: "Canada"
+addressRegion: "Quebec"
+addressLocality: "Montreal"
+postalCode: "H2T 2K5"
+streetAddress: "211 Bernard Ouest"
+long: "-73.6047315"
+lat: "45.524778"
 ---
 
 Montréal and the French language are inextricably linked. You cannot have Quebecois without the city, and you cannot imagine the city without the pervasive French language. This was not always the case. The city was once the center of English Canadian influence, and the Quebecois overtook Quebecers as the primary population in the city only after centuries of being delegated as secondary citizens and backcountry yokels. Today, both French and English are spoken in the city, bilingually by most of the population. The richer neighborhoods are still largely Anglophone (although almost always described as anglophone, and not English speaking).

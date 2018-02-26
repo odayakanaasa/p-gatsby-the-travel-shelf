@@ -4,25 +4,17 @@ date: "2018-01-22"
 thumbnail: "img/word/word_1.jpg"
 url: "http://wordbookstore.ca/"
 telephone: "514 845 5640"
-amenities: {
-    "events": "true"
-    }
-social: {
-    "twitter": "https://twitter.com/wordbookman",
-    "facebook": "https://www.facebook.com/pages/The-Word-Bookstore/188781041205986",
-    "instagram": "https://www.instagram.com/wordbookstore/"
-    }
-postalAddress: {
-    "addressCountry": "Canada",
-    "addressRegion": "Quebec",
-    "addressLocality": "Montreal",
-    "postalCode": "H2X 1W3",
-    "streetAddress": "469 Milton Street"
-    }
-coordinates: {
-    "long": -73.575146,
-    "lat": 45.507991
-    }
+events: "true"
+twitter: "https://twitter.com/wordbookman"
+facebook: "https://www.facebook.com/pages/The-Word-Bookstore/188781041205986"
+instagram: "https://www.instagram.com/wordbookstore/"
+addressCountry: "Canada"
+addressRegion: "Quebec"
+addressLocality: "Montreal"
+postalCode: "H2X 1W3"
+streetAddress: "469 Milton Street"
+long: "-73.575146"
+lat: "45.507991"
 ---
 
 > In the beginning was the word…
