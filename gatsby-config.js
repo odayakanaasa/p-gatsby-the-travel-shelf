@@ -12,13 +12,6 @@ module.exports = {
           path: `${__dirname}/src/`,
       }
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //       name: `bookstore-posts`,
-    //       path: `${__dirname}/src/bookstore-posts/`,
-    //   }
-    // },
     `gatsby-transformer-remark`
     // {
     //   resolve: `gatsby-source-filesystem`,
